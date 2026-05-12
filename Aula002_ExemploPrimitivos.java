@@ -1,0 +1,9 @@
+public class ExemploPrimitivos {
+    public static void main(String[] args) {
+        double a = 1, b = 2.9999;
+        double soma = a % b;
+        String teste1 = "James";
+        Boolean teste2 = false;
+        System.out.println("Soma: " + soma + " - " + teste1 + " - " + teste2);
+    }
+}
