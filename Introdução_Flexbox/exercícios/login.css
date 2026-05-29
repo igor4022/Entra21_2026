@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=DM+Sans:wght@300;400;500&display=swap');
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --bg: #0d0d0f;
+  --surface: #16161a;
+  --border: #2a2a32;
+  --accent: #c8a96e;
+  --accent-soft: rgba(200, 169, 110, 0.12);
+  --text: #f0ede6;
+  --muted: #7a7880;
+  --input-bg: #1e1e24;
+}
+
+body {
+  min-height: 100vh;
+  background-color: var(--bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'DM Sans', sans-serif;
+  color: var(--text);
+  position: relative;
+  overflow: hidden;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  top: -30%;
+  left: -10%;
+  width: 60vw;
+  height: 60vw;
+  background: radial-gradient(circle, rgba(200, 169, 110, 0.06) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+body::after {
+  content: '';
+  position: fixed;
+  bottom: -20%;
+  right: -10%;
+  width: 50vw;
+  height: 50vw;
+  background: radial-gradient(circle, rgba(120, 100, 200, 0.05) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+h1 {
+  display: none;
+}
+
+.login {
+  position: relative;
+  z-index: 1;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 3rem 2.8rem 2.8rem;
+  width: 100%;
+  max-width: 420px;
+  animation: fadeUp 0.6s ease both;
+}
+
+.login::before {
+  content: 'Faça o login';
+  display: block;
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 0.4rem;
+  letter-spacing: -0.02em;
+}
+
+.login::after {
+  content: 'Bem-vindo de volta.';
+  display: block;
+  font-size: 0.9rem;
+  color: var(--muted);
+  margin-bottom: 2.2rem;
+  font-weight: 300;
+}
+
+label {
+  display: block;
+  font-size: 0.78rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--muted);
+  margin-bottom: 0.45rem;
+  margin-top: 1.4rem;
+}
+
+label:first-of-type {
+  margin-top: 0;
+}
+
+input[type="text"],
+input[type="email"] {
+  display: block;
+  width: 100%;
+  background: var(--input-bg);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 0.85rem 1rem;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 400;
+  color: var(--text);
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s, background 0.2s;
+}
+
+input[type="text"]::placeholder,
+input[type="email"]::placeholder {
+  color: var(--muted);
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus {
+  border-color: var(--accent);
+  background: #202028;
+  box-shadow: 0 0 0 3px rgba(200, 169, 110, 0.1);
+}
+
+br {
+  display: none;
+}
+
+button {
+  display: block;
+  width: 100%;
+  margin-top: 2rem;
+  padding: 0.9rem 1.5rem;
+  background: var(--accent);
+  color: #0d0d0f;
+  border: none;
+  border-radius: 10px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 500;
+  letter-spacing: 0.03em;
+  cursor: pointer;
+  transition: opacity 0.2s, transform 0.15s;
+  position: relative;
+  overflow: hidden;
+}
+
+button::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0);
+  transition: background 0.2s;
+}
+
+button:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+
+button:active {
+  transform: translateY(0px) scale(0.99);
+}
+
+button a {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 480px) {
+  .login {
+    margin: 1.5rem;
+    padding: 2.2rem 1.8rem 2rem;
+  }
+}
