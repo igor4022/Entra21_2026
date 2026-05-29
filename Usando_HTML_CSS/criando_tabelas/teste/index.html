@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabela</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <table class="container">
+        <tr>
+            <th>Nomes</th>
+            <th>idade</th>
+            <th>email</th>
+        </tr>
+        <tr>
+            <td>Igor</td>
+            <td>17</td>
+            <td>conta@gmail.com</td>
+        </tr>
+        <tr>
+            <td>Lucas</td>
+            <td>25</td>
+            <td>outraconta@gmail.com</td>
+        </tr>
+    </table>
+    <form action="cadastro.java" method="post">
+        <label for="nome">Nome</label>
+        <input type="text" name="nome" id="nome" required><br>
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email" required><br>
+        <input type="submit" value="enviar">
+    </form>
+</body>
+</html>

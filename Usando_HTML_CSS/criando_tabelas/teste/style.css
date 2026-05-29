@@ -1,0 +1,12 @@
+.container {
+    background-color: rgb(194, 194, 194);
+    border-collapse: collapse;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    border: solid black;
+}
+
+table,tr,th,td {
+    border: solid black;
+}

@@ -1,0 +1,13 @@
+.login {
+    position: relative;
+    background-color: black;
+    color: aliceblue;
+    width: 350px;
+    height: 500px;
+}
+
+h1 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+    color: blueviolet;
+}
