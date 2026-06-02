@@ -1,0 +1,72 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body{
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    background: linear-gradient(135deg,#1e1e24,#2d2d44,#4a4a7a);
+    color:white;
+}
+
+h1{
+    margin-bottom:25px;
+    font-size:2.5rem;
+    text-shadow:0 4px 12px rgba(0,0,0,.4);
+}
+
+form{
+    background:rgba(255,255,255,0.08);
+    backdrop-filter: blur(12px);
+    padding:30px;
+    border-radius:20px;
+    width:350px;
+    box-shadow:0 10px 30px rgba(0,0,0,.3);
+    border:1px solid rgba(255,255,255,.15);
+}
+
+label{
+    display:block;
+    margin-bottom:8px;
+    font-weight:bold;
+}
+
+input[type="text"],
+input[type="password"]{
+    width:100%;
+    padding:12px;
+    margin-bottom:18px;
+    border:none;
+    border-radius:10px;
+    background:rgba(255,255,255,.15);
+    color:white;
+}
+
+input[type="text"]::placeholder,
+input[type="password"]::placeholder{
+    color:#ddd;
+}
+
+input[type="submit"]{
+    width:100%;
+    padding:12px;
+    border:none;
+    border-radius:10px;
+    cursor:pointer;
+    font-weight:bold;
+    font-size:1rem;
+    background:linear-gradient(90deg,#ffd700,#ffb300);
+    color:#1e1e24;
+    transition:.3s;
+}
+
+input[type="submit"]:hover{
+    transform:translateY(-2px);
+    box-shadow:0 5px 15px rgba(255,215,0,.4);
+}
