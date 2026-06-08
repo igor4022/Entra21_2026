@@ -3,6 +3,7 @@ const resultado = document.querySelector('#resultado');
 botao.addEventListener('click', (event) => {
     event.preventDefault();
     calcularMedia();
+    botao.disabled = true;
 });
 
 function calcularMedia() {
@@ -13,6 +14,23 @@ function calcularMedia() {
     let div = document.createElement('div');
     let situacao = document.createElement('div');
     let frequencia = document.createElement('div');
+    let data = document.createElement('div');
+    let tempoReal = document.createElement('div');
+
+    let dataAtual = new Date();
+    let dataReferencia = new Date(dataAtual.getFullYear(), 11, 31);
+    const horas = String(dataAtual.getHours()).padStart(2, '0');
+    const minutos = String(dataAtual.getMinutes()).padStart(2, '0');
+    const segundos = String(dataAtual.getSeconds()).padStart(2, '0');
+    let tempo = `${horas}h ${minutos}m ${segundos}s`;
+    resultado.appendChild(data);
+    data.classList.add('data');
+    data.textContent = `Data: ${dataAtual.toLocaleDateString()}`;
+    data.textContent = `Data: ${new Date().toLocaleDateString()}`;
+    resultado.appendChild(tempoReal);
+    tempoReal.classList.add('tempo-real');
+    tempoReal.textContent = `Tempo Real: ${tempo}`;
+
 
     const valor = Number(document.querySelector('#frequencia').value);
     const totalAulas = 100;
