@@ -70,3 +70,9 @@ input[type="submit"]:hover{
     transform:translateY(-2px);
     box-shadow:0 5px 15px rgba(255,215,0,.4);
 }
+
+#exibirNome{
+    margin-top:20px;
+    color:#ffd700;
+    text-shadow:0 2px 8px rgba(255,215,0,.5);
+}

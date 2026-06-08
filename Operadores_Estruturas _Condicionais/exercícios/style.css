@@ -1,0 +1,96 @@
+.aprovado {
+    color: green;
+}
+.recuperacao {
+    color: orange;
+}
+.reprovado {
+    color: red;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(
+        135deg,
+        #6a11cb,
+        #2575fc
+    );
+}
+
+form{
+    width: 400px;
+    padding: 30px;
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(15px);
+    border-radius: 20px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+    border: 1px solid rgba(255,255,255,0.2);
+}
+
+form label{
+    display: block;
+    margin-bottom: 8px;
+    color: white;
+    font-weight: bold;
+}
+
+form input[type="number"]{
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    background: rgba(255,255,255,0.2);
+    color: white;
+    font-size: 16px;
+}
+
+form input[type="number"]::placeholder{
+    color: rgba(255,255,255,0.7);
+}
+
+.botao{
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(
+        45deg,
+        #00f5a0,
+        #00d9f5
+    );
+    color: #111;
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.botao:hover{
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0,245,160,0.4);
+}
+
+#resultado{
+    position: absolute;
+    bottom: 60px;
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+    text-align: center;
+    padding: 15px 25px;
+    border-radius: 15px;
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(10px);
+}
