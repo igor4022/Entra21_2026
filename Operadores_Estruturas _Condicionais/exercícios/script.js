@@ -1,5 +1,6 @@
 const botao = document.querySelector('.botao');
 const resultado = document.querySelector('#resultado');
+const valor = document.querySelector('#frequencia');
 botao.addEventListener('click', (event) => {
     event.preventDefault();
     calcularMedia();
@@ -36,9 +37,6 @@ function calcularMedia() {
     const totalAulas = 100;
     const percentualFrequencia = (valor / totalAulas) * 100;
 
-    frequencia.textContent = `Frequência: ${percentualFrequencia.toFixed(1)}%`;
-    resultado.appendChild(frequencia);
-    frequencia.classList.add('frequencia');
 
     resultado.appendChild(situacao);
     situacao.classList.add('situacao');
@@ -48,7 +46,8 @@ function calcularMedia() {
         resultado.appendChild(div);
         div.classList.add('aprovado');
         div.textContent = 'APROVADO';
-    } else if (media >= 5) {
+
+    } else if (media >= 5 ) {
         resultado.appendChild(div);
         div.classList.add('recuperacao');
         div.textContent = 'RECUPERAÇÃO';
@@ -56,5 +55,18 @@ function calcularMedia() {
         resultado.appendChild(div);
         div.classList.add('reprovado');
         div.textContent = 'REPROVADO';
+    }
+    if (valor >= 70) {
+        resultado.appendChild(frequencia);
+        frequencia.classList.add('aprovado');
+        frequencia.textContent = `Frequência: ${percentualFrequencia.toFixed(1)}%`;
+    } else if (valor >= 50 ) {
+        resultado.appendChild(frequencia);
+        frequencia.classList.add('recuperacao');
+        frequencia.textContent = `Frequência: ${percentualFrequencia.toFixed(1)}%`;
+    } else {
+        resultado.appendChild(frequencia);
+        frequencia.classList.add('reprovado');
+        frequencia.textContent = `Frequência: ${percentualFrequencia.toFixed(1)}%`;
     }
 }
