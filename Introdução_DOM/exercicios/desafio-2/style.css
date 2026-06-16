@@ -1,0 +1,206 @@
+.amarelo {
+    background-color: rgb(251, 255, 194);
+}
+
+.azul {
+    background-color: blue;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+/* ── Reset & Base ── */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --bg:        #0F1724;
+    --surface:   #1A2438;
+    --surface2:  #222E45;
+    --border:    #2C3E5A;
+    --accent:    #00D4AA;
+    --accent-dim:#00D4AA22;
+    --yellow:    #FFD166;
+    --yellow-dim:#FFD16622;
+    --text:      #E8F0FE;
+    --text-muted:#7A8FAD;
+    --radius:    14px;
+    --radius-sm: 8px;
+    --shadow:    0 4px 24px rgba(0,0,0,0.35);
+}
+
+body {
+    font-family: 'Inter', system-ui, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    min-height: 100vh;
+    padding: 40px 16px 60px;
+}
+
+/* ── Form Card ── */
+form {
+    max-width: 520px;
+    margin: 0 auto 32px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 28px 24px;
+    box-shadow: var(--shadow);
+}
+
+form::before {
+    content: '🛒 Minha Lista';
+    display: block;
+    font-size: 1.4rem;
+    font-weight: 700;
+    background: linear-gradient(135deg, var(--accent), #56CFE1);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 24px;
+    letter-spacing: -0.3px;
+}
+
+/* ── Labels ── */
+label {
+    display: block;
+    font-size: 0.82rem;
+    font-weight: 500;
+    color: var(--text-muted);
+    margin-bottom: 6px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+}
+
+/* ── Inputs ── */
+input[type="text"] {
+    display: block;
+    width: 100%;
+    background: var(--surface2);
+    border: 1.5px solid var(--border);
+    border-radius: var(--radius-sm);
+    color: var(--text);
+    font-family: inherit;
+    font-size: 0.95rem;
+    padding: 10px 14px;
+    outline: none;
+    margin-bottom: 16px;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+input[type="text"]::placeholder {
+    color: var(--text-muted);
+    opacity: 0.5;
+}
+
+input[type="text"]:focus {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px var(--accent-dim);
+}
+
+/* hide the <br> effect — inputs already have margin */
+br {
+    display: none;
+}
+
+/* ── Buttons ── */
+input[type="submit"] {
+    font-family: inherit;
+    font-size: 0.88rem;
+    font-weight: 600;
+    border: none;
+    border-radius: var(--radius-sm);
+    padding: 10px 18px;
+    cursor: pointer;
+    margin-top: 4px;
+    margin-right: 8px;
+    transition: transform 0.1s, box-shadow 0.2s, background 0.2s;
+}
+
+input[type="submit"]:active {
+    transform: scale(0.97);
+}
+
+#adicionar {
+    background: var(--accent);
+    color: #0F1724;
+    box-shadow: 0 2px 12px rgba(0, 212, 170, 0.3);
+}
+
+#adicionar:hover {
+    background: #00EFC0;
+    box-shadow: 0 4px 18px rgba(0, 212, 170, 0.45);
+}
+
+#destacar {
+    background: var(--yellow-dim);
+    color: var(--yellow);
+    border: 1px solid var(--yellow);
+}
+
+#destacar:hover {
+    background: #FFD16633;
+}
+
+#lista {
+    background: var(--surface2);
+    color: var(--text-muted);
+    border: 1px solid var(--border);
+}
+
+#lista:hover {
+    color: var(--text);
+    border-color: var(--text-muted);
+}
+
+/* ── Product List ── */
+.conteudo {
+    max-width: 520px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* ── Product Items ── */
+.produto {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    padding: 14px 16px;
+    font-size: 0.95rem;
+    color: var(--text);
+    animation: slideIn 0.25s ease;
+    transition: border-color 0.2s;
+}
+
+.produto:hover {
+    border-color: var(--accent);
+}
+
+@keyframes slideIn {
+    from { opacity: 0; transform: translateY(-8px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ── Highlighted ── */
+.produto[style*="bold"] {
+    border-left: 3px solid var(--accent);
+    padding-left: 13px;
+}
+
+/* ── Colored (amarelo) ── */
+.amarelo {
+    background: var(--yellow-dim) !important;
+    border-color: var(--yellow) !important;
+    color: var(--yellow);
+}
+
+/* ── Azul class (mantido) ── */
+.azul {
+    background: #1A2E5A;
+    border-color: #4A7AFF;
+}
+
