@@ -56,7 +56,9 @@ document
 document
     .getElementById("btnMenos")
     .addEventListener("click", function () {
-        valor--;
+        if(valor != 0) {
+            valor--;
+        }
         contador.textContent = valor;
     });
 const zerar = document.querySelector('#btnZerar');
