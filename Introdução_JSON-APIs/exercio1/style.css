@@ -1,0 +1,45 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+h1{
+    color: #333;
+}
+
+input{
+    padding: 10px;
+    width: 300px;
+    margin: 10px 0;
+}
+
+button{
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+#usuarios{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.usuario{
+    background-color: white;
+    border-radius: 10px;
+    padding: 15px;
+    width: 220px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.usuario img{
+    width: 100%;
+    border-radius: 10px;
+}
+
+textarea{
+    width: 100%;
+    margin-top: 10px;
+}

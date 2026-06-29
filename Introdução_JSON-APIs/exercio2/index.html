@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Consulta de CEP</h1>
+
+        <input
+            type="text"
+            id="cep"
+            placeholder="Digite o CEP"
+            maxlength="8"
+        >
+
+        <button id="buscar">Buscar CEP</button>
+
+        <div id="resultado"></div>
+
+        <p id="dataHora"></p>
+
+        <h2>JSON da API</h2>
+
+        <textarea id="json" readonly></textarea>
+    </div>
+
+</body>
+<script src="script.js"></script>
+</html>
